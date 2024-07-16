@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  preco: 9.99
+  data_validade: 2024-05-09 21:22:44
+  quantidade_estoque: 9.99
+
+two:
+  nome: MyString
+  preco: 9.99
+  data_validade: 2024-05-09 21:22:44
+  quantidade_estoque: 9.99
