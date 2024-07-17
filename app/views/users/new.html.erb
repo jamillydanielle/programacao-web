@@ -1,0 +1,42 @@
+<!-- app/views/users/new.html.erb -->
+<h1>Cadastrar Novo Usuário</h1>
+
+<%= form_with(model: @user, local: true) do |form| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "erro") %> impediram o cadastro:</h2>
+
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :login %>
+    <%= form.text_field :login %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eh_admin %>
+    <%= form.check_box :eh_admin %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Cadastrar Usuário" %>
+  </div>
+<% end %>
+
+<%= link_to "Voltar", root_path %>

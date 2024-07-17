@@ -1,0 +1,28 @@
+<h1>Admin Dashboard</h1>
+
+<p>Total de Usuários: <%= @total_users %></p>
+<p>Total de Produtos: <%= @total_produtos %></p>
+
+<h2>Lista de Produtos</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Data de Validade</th>
+      <th>Quantidade em Estoque</th>
+      <th>Cadastrado por</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @produtos.each do |produto| %>
+      <tr>
+        <td><%= produto.nome %></td>
+        <td><%= produto.preco %></td>
+        <td><%= produto.data_validade %></td>
+        <td><%= produto.quantidade_estoque %></td>
+        <td><%= produto.user.nome %></td> <!-- Assumindo que a associação está correta -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
