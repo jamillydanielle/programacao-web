@@ -11,13 +11,15 @@
 User.create!(
   nome: "Admin",
   login: "admin",
-  password: BCrypt::Password.create("admin"),
+  email: "admin@admin.com",
+  password: BCrypt::Password.create("admin123"),
   eh_admin: true
 )
 
 User.create!(
   nome: "User",
   login: "user123",
+  email: "user@user.com",
   password: BCrypt::Password.create("user123"),
   eh_admin: false
 )

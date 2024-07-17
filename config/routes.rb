@@ -1,32 +1,26 @@
 Rails.application.routes.draw do
-
-
-  devise_for :users, controllers: {
-  sessions: 'users/sessions'
-}
-
   
-  devise_scope :user do
-    # Define a página de login do Devise como a rota raiz
-    root to: 'devise/sessions#new'
-  end
-
-  namespace :admin do
-    resources :dashboard, only: [:index]
-  end
+get '/produtos', to: 'produtos#index'
 
 
-  delete '/logout', to: 'devise/sessions#destroy', as: :logout
+get '/produtos/:id', to: 'produtos#show', as: 'produto'
 
 
-  get '/sobre', to: 'home#sobre', as: 'home_sobre'
-  resources :produtos
+get '/produtos/new', to: 'produtos#new', as: 'new_produto'
 
-  resources :users, only: [:new, :create]
 
-  resource :session, only: [:new, :create, :destroy] # Singular resource
+post '/produtos', to: 'produtos#create'
 
-  namespace :admin do
-    resources :dashboard, only: [:index]
-  end
+
+get '/produtos/:id/edit', to: 'produtos#edit', as: 'edit_produto'
+
+
+patch '/produtos/:id', to: 'produtos#update'
+put '/produtos/:id', to: 'produtos#update'
+
+
+delete '/produtos/:id', to: 'produtos#destroy'
+
+root to: 'produtos#index'
+  
 end

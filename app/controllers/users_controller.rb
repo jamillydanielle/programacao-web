@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user! # Garante que o usuário esteja autenticado para acessar qualquer ação
-  before_action :set_user, only: [:edit, :update, :destroy]
+ # before_action :authenticate_user! # Garante que o usuário esteja autenticado para acessar qualquer ação
+  #before_action :set_user, only: [:edit, :update, :destroy]
 
   # GET /users
   def index
