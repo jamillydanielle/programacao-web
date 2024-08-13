@@ -23,18 +23,14 @@
       <td><%= produto.preco %></td>
       <td><%= produto.data_validade.strftime("%d/%m/%Y") %></td>
       <td><%= produto.quantidade_estoque %></td>
-      <td colspan="5"><%= link_to "Mostrar", produto %></td>
-      <td colspan="5"><%= link_to "Editar", edit_produto_path(produto) %></td>
-      <td colspan="5"><%= link_to "Apagar", produto, method: :delete %></td>
-
-      controller: 'your_controller_name', action: 'destroy', id: @package.id, method: :delete
-
+      <td><%= link_to "Mostrar", produto %></td>
+      <td><%= link_to "Editar", edit_produto_path(produto) %></td>
+      <td><%= button_to "Apagar", {:controller => :produtos,
+        :action => 'destroy', :id => produto.id }, :method => :delete %></td>    
     </tr>
     <% end %>
     </div>
-
-
+  </tbody>
 </table>
 
-
-<%= link_to "Cadastrar novo produto", new_produto_path, class:"btn btn-dark" %>
+<%= link_to "Cadastrar novo produto", new_produto_path, class: "btn btn-dark" %>

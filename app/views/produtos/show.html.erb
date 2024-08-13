@@ -4,7 +4,8 @@
 
 <div>
   <%= link_to "Editar", edit_produto_path(@produto), class: "btn btn-dark", style: "margin-right: 30px;" %>
-  <%= link_to "Apagar", @produto, method: :delete, class: "btn btn-dark" %>
+  <%= button_to "Apagar", { controller: :produtos, action: 'destroy', id: @produto.id }, method: :delete, class: "btn btn-dark" %>
+
 
   <br> <br>
   <%= link_to "Retornar à listagem", produtos_path, class: "btn btn-dark" %>

@@ -12966,3 +12966,1225 @@ Processing by ProdutosController#show as HTML
 Completed 200 OK in 64ms (Views: 48.9ms | ActiveRecord: 0.1ms | Allocations: 3369)
 
 
+Started GET "/" for 127.0.0.1 at 2024-08-12 17:44:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 198.3ms | Allocations: 13808)
+  Rendered layout layouts/application.html.erb (Duration: 3765.8ms | Allocations: 159182)
+Completed 500 Internal Server Error in 5631ms (ActiveRecord: 12.4ms | Allocations: 228958)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/programacaoWeb/programacao-web/tmp/cache/assets/sprockets/v4.0.0/xr/xrSV8m24km9evFv8erILQZK-hhzuF4ZxGbvLcTUhhLE.cache.28620.43948.963559, C:/programacaoWeb/programacao-web/tmp/cache/assets/sprockets/v4.0.0/xr/xrSV8m24km9evFv8erILQZK-hhzuF4ZxGbvLcTUhhLE.cache)):
+  
+sprockets (4.2.1) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.2.1) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.2.1) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.2.1) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.2.1) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.2.1) lib/sprockets/loader.rb:343:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-08-12 17:45:54 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 821)
+  Rendered home/_header.html.erb (Duration: 1.6ms | Allocations: 268)
+  Rendered layout layouts/application.html.erb (Duration: 240.6ms | Allocations: 29064)
+Completed 200 OK in 258ms (Views: 245.6ms | ActiveRecord: 0.1ms | Allocations: 29398)
+
+
+Started GET "/produtos/1" for 127.0.0.1 at 2024-08-12 17:46:05 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 1.8ms | Allocations: 264)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 150.3ms | Allocations: 3984)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 204.8ms | Allocations: 6324)
+Completed 200 OK in 776ms (Views: 209.8ms | ActiveRecord: 0.4ms | Allocations: 16949)
+
+
+Started GET "/produtos/1" for 127.0.0.1 at 2024-08-12 17:46:09 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 386)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 56.9ms | Allocations: 2702)
+Completed 200 OK in 75ms (Views: 59.0ms | ActiveRecord: 0.1ms | Allocations: 3333)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2024-08-12 17:46:17 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+Completed 404 Not Found in 14ms (ActiveRecord: 0.1ms | Allocations: 848)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Produto with 'id'=new):
+  
+app/controllers/produtos_controller.rb:63:in `set_produto'
+Started GET "/produtos/new" for 127.0.0.1 at 2024-08-12 17:47:29 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+Completed 404 Not Found in 16ms (ActiveRecord: 0.1ms | Allocations: 836)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Produto with 'id'=new):
+  
+app/controllers/produtos_controller.rb:63:in `set_produto'
+Started GET "/" for 127.0.0.1 at 2024-08-12 17:52:23 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 836)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 3184)
+Completed 200 OK in 59ms (Views: 49.1ms | ActiveRecord: 0.1ms | Allocations: 3462)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2024-08-12 17:53:23 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+Completed 404 Not Found in 21ms (ActiveRecord: 0.1ms | Allocations: 824)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Produto with 'id'=new):
+  
+app/controllers/produtos_controller.rb:63:in `set_produto'
+Started GET "/produtos/new" for 127.0.0.1 at 2024-08-12 18:00:29 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"new"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 524)
+
+
+  
+NoMethodError (undefined method `set_produto' for #<ProdutosController:0x00000000012a20>):
+  
+activesupport (7.1.2) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.2) lib/active_support/callbacks.rb:183:in `block (2 levels) in halting_and_conditional'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:184:in `block in halting_and_conditional'
+activesupport (7.1.2) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.2) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.2) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.2) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+actiontext (7.1.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/produtos/new" for 127.0.0.1 at 2024-08-12 18:04:13 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mProduto Load (5.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+Completed 404 Not Found in 42ms (ActiveRecord: 8.8ms | Allocations: 2654)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Produto with 'id'=new):
+  
+app/controllers/produtos_controller.rb:63:in `set_produto'
+Started GET "/produtos/new" for 127.0.0.1 at 2024-08-12 18:06:05 -0300
+Processing by ProdutosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/_form.html.erb (Duration: 93.7ms | Allocations: 3595)
+  Rendered produtos/new.html.erb within layouts/application (Duration: 99.5ms | Allocations: 3901)
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 152.3ms | Allocations: 6768)
+Completed 200 OK in 226ms (Views: 189.2ms | ActiveRecord: 9.9ms | Allocations: 12260)
+
+
+Started GET "/produtos/1/edit" for 127.0.0.1 at 2024-08-12 18:06:22 -0300
+Processing by ProdutosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/edit.html.erb within layouts/application
+  Rendered produtos/_form.html.erb (Duration: 3.7ms | Allocations: 1077)
+  Rendered produtos/edit.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1311)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 3626)
+Completed 200 OK in 80ms (Views: 57.4ms | ActiveRecord: 0.3ms | Allocations: 5024)
+
+
+Started GET "/produtos/1" for 127.0.0.1 at 2024-08-12 18:06:27 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 1.9ms | Allocations: 245)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 11.1ms | Allocations: 984)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 49.2ms | Allocations: 3300)
+Completed 200 OK in 68ms (Views: 50.9ms | ActiveRecord: 0.1ms | Allocations: 4001)
+
+
+Started GET "/produtos/1" for 127.0.0.1 at 2024-08-12 18:06:31 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 416)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 2731)
+Completed 200 OK in 60ms (Views: 48.6ms | ActiveRecord: 0.1ms | Allocations: 3347)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:06:36 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1326)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 53.1ms | Allocations: 3646)
+Completed 200 OK in 69ms (Views: 54.5ms | ActiveRecord: 0.3ms | Allocations: 4011)
+
+
+Started GET "/produtos/3" for 127.0.0.1 at 2024-08-12 18:07:06 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.3ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 34.2ms | Allocations: 431)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 141.2ms | Allocations: 2746)
+Completed 200 OK in 172ms (Views: 143.6ms | ActiveRecord: 0.2ms | Allocations: 3362)
+
+
+Started GET "/produtos/3" for 127.0.0.1 at 2024-08-12 18:09:57 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 3.1ms | Allocations: 259)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 15.7ms | Allocations: 1053)
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 80.5ms | Allocations: 3924)
+Completed 200 OK in 181ms (Views: 130.6ms | ActiveRecord: 18.0ms | Allocations: 10397)
+
+
+Started GET "/produtos/3" for 127.0.0.1 at 2024-08-12 18:10:12 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.6ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 431)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 83.7ms | Allocations: 2746)
+Completed 200 OK in 106ms (Views: 85.8ms | ActiveRecord: 0.1ms | Allocations: 3362)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:10:55 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1334)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 73.5ms | Allocations: 3654)
+Completed 200 OK in 96ms (Views: 74.9ms | ActiveRecord: 0.3ms | Allocations: 4019)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:11:00 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 981)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 3301)
+Completed 200 OK in 89ms (Views: 74.1ms | ActiveRecord: 0.3ms | Allocations: 3579)
+
+
+Started GET "/produtos/3" for 127.0.0.1 at 2024-08-12 18:11:08 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.2ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 425)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 58.4ms | Allocations: 2740)
+Completed 200 OK in 72ms (Views: 60.2ms | ActiveRecord: 0.2ms | Allocations: 3356)
+
+
+Started GET "/produtos/3" for 127.0.0.1 at 2024-08-12 18:11:36 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.3ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 425)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 73.0ms | Allocations: 2740)
+Completed 200 OK in 93ms (Views: 74.9ms | ActiveRecord: 0.1ms | Allocations: 3356)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:12:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 192.5ms | Allocations: 14963)
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 534.8ms | Allocations: 49774)
+Completed 200 OK in 1145ms (Views: 592.3ms | ActiveRecord: 6.8ms | Allocations: 72051)
+
+
+Started GET "/produtos/3" for 127.0.0.1 at 2024-08-12 18:12:27 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 2.8ms | Allocations: 264)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 23.7ms | Allocations: 1165)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 92.8ms | Allocations: 3482)
+Completed 200 OK in 708ms (Views: 96.1ms | ActiveRecord: 0.2ms | Allocations: 13732)
+
+
+Started GET "/produtos/3" for 127.0.0.1 at 2024-08-12 18:17:15 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 1.4ms | Allocations: 259)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1041)
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 62.7ms | Allocations: 3961)
+Completed 200 OK in 150ms (Views: 100.9ms | ActiveRecord: 6.5ms | Allocations: 10462)
+
+
+Started GET "/produtos/1" for 127.0.0.1 at 2024-08-12 18:19:42 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.2ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 419)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 47.3ms | Allocations: 2734)
+Completed 200 OK in 62ms (Views: 49.1ms | ActiveRecord: 0.1ms | Allocations: 3356)
+
+
+Started GET "/produtos/1" for 127.0.0.1 at 2024-08-12 18:19:52 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.2ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 425)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 2741)
+Completed 200 OK in 55ms (Views: 43.6ms | ActiveRecord: 0.1ms | Allocations: 3376)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:20:57 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 27.2ms | Allocations: 5971)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 6057)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 11.8ms | Allocations: 8111)
+
+
+  
+ActionView::Template::Error (undefined method `delete_produto_path' for #<ActionView::Base:0x00000000015590>):
+    25:       <td><%= produto.quantidade_estoque %></td>
+    26:       <td><%= link_to "Mostrar", produto %></td>
+    27:       <td><%= link_to "Editar", edit_produto_path(produto) %></td>
+    28:       <td><%= link_to "Apagar", delete_produto_path(produto), method: :delete, data: { confirm: "Tem certeza que deseja apagar este produto?" }, class: "btn btn-danger" %></td>
+    29:     </tr>
+    30:     <% end %>
+    31:     </div>
+  
+app/views/produtos/index.html.erb:28
+app/views/produtos/index.html.erb:19
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:22:24 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 26.7ms | Allocations: 4903)
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 93.5ms | Allocations: 7835)
+Completed 200 OK in 182ms (Views: 132.8ms | ActiveRecord: 10.7ms | Allocations: 9891)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:25:51 -0300
+Started GET "/produtos/1" for 127.0.0.1 at 2024-08-12 18:26:01 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 4897)
+  Rendered home/_header.html.erb (Duration: 1.7ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 1012.1ms | Allocations: 12874)
+Completed 200 OK in 1075ms (Views: 1040.3ms | ActiveRecord: 10.3ms | Allocations: 14931)
+
+
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 5.0ms | Allocations: 259)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1029)
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 75.2ms | Allocations: 3950)
+Completed 200 OK in 186ms (Views: 123.1ms | ActiveRecord: 21.7ms | Allocations: 10488)
+
+
+Started GET "/produtos/1" for 127.0.0.1 at 2024-08-12 18:26:16 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.5ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 422)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 2733)
+Completed 200 OK in 57ms (Views: 45.2ms | ActiveRecord: 0.2ms | Allocations: 3354)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:34:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 273.6ms | Allocations: 17888)
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 278)
+  Rendered layout layouts/application.html.erb (Duration: 4840.3ms | Allocations: 150264)
+Completed 200 OK in 6340ms (Views: 4922.1ms | ActiveRecord: 8.5ms | Allocations: 220147)
+
+
+Started DELETE "/produtos" for 127.0.0.1 at 2024-08-12 18:35:02 -0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/produtos"):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:35:31 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 24.6ms | Allocations: 5691)
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 260)
+  Rendered layout layouts/application.html.erb (Duration: 91.2ms | Allocations: 8498)
+Completed 200 OK in 168ms (Views: 124.8ms | ActiveRecord: 8.1ms | Allocations: 10561)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2024-08-12 18:36:17 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 3ms (ActiveRecord: 0.0ms | Allocations: 852)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.1.3.4) lib/action_controller/metal/request_forgery_protection.rb:293:in `handle_unverified_request'
+actionpack (7.1.3.4) lib/action_controller/metal/request_forgery_protection.rb:388:in `handle_unverified_request'
+devise (4.9.4) lib/devise/controllers/helpers.rb:257:in `handle_unverified_request'
+actionpack (7.1.3.4) lib/action_controller/metal/request_forgery_protection.rb:377:in `verify_authenticity_token'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.7) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:37:03 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 5668)
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 88.8ms | Allocations: 8493)
+Completed 200 OK in 154ms (Views: 116.9ms | ActiveRecord: 10.5ms | Allocations: 10552)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2024-08-12 18:37:19 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 8ms (ActiveRecord: 0.0ms | Allocations: 776)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.1.3.4) lib/action_controller/metal/request_forgery_protection.rb:293:in `handle_unverified_request'
+actionpack (7.1.3.4) lib/action_controller/metal/request_forgery_protection.rb:388:in `handle_unverified_request'
+devise (4.9.4) lib/devise/controllers/helpers.rb:257:in `handle_unverified_request'
+actionpack (7.1.3.4) lib/action_controller/metal/request_forgery_protection.rb:377:in `verify_authenticity_token'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.7) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-08-12 18:38:56 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 5753)
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 101.2ms | Allocations: 8580)
+Completed 200 OK in 167ms (Views: 132.9ms | ActiveRecord: 7.4ms | Allocations: 10639)
+
+
+Started DELETE "/produtos/1" for 127.0.0.1 at 2024-08-12 18:39:12 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+  [1m[36mProduto Destroy (2.6ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/produtos
+Completed 302 Found in 45ms (ActiveRecord: 5.2ms | Allocations: 4685)
+
+
+Started GET "/produtos" for 127.0.0.1 at 2024-08-12 18:39:12 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1120)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 3354)
+Completed 200 OK in 66ms (Views: 53.8ms | ActiveRecord: 0.1ms | Allocations: 3633)
+
+
+Started DELETE "/produtos/3" for 127.0.0.1 at 2024-08-12 18:39:17 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+  [1m[36mProduto Destroy (2.1ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/produtos
+Completed 302 Found in 21ms (ActiveRecord: 2.5ms | Allocations: 1909)
+
+
+Started GET "/produtos" for 127.0.0.1 at 2024-08-12 18:39:17 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 888)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 40.4ms | Allocations: 3123)
+Completed 200 OK in 50ms (Views: 42.2ms | ActiveRecord: 0.1ms | Allocations: 3401)
+
+
+Started GET "/produtos" for 127.0.0.1 at 2024-08-12 18:39:20 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 874)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 3108)
+Completed 200 OK in 50ms (Views: 39.6ms | ActiveRecord: 0.1ms | Allocations: 3386)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-13 09:29:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 183.7ms | Allocations: 15455)
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 276)
+  Rendered layout layouts/application.html.erb (Duration: 516.6ms | Allocations: 45693)
+Completed 200 OK in 1116ms (Views: 556.8ms | ActiveRecord: 10.6ms | Allocations: 67993)
+
+
+Started GET "/produtos/2/edit" for 127.0.0.1 at 2024-08-13 09:29:12 -0300
+Processing by ProdutosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/edit.html.erb within layouts/application
+  Rendered produtos/_form.html.erb (Duration: 73.4ms | Allocations: 3437)
+  Rendered produtos/edit.html.erb within layouts/application (Duration: 85.7ms | Allocations: 3738)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 124.2ms | Allocations: 5987)
+Completed 200 OK in 151ms (Views: 125.8ms | ActiveRecord: 0.2ms | Allocations: 8640)
+
+
+Started PATCH "/produtos/2" for 127.0.0.1 at 2024-08-13 09:29:16 -0300
+Processing by ProdutosController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "produto"=>{"nome"=>"teste edição1", "preco"=>"21.0", "data_validade"=>"2024-08-10", "quantidade_estoque"=>"50.0"}, "commit"=>"Salvar", "id"=>"2"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:40:in `block in update'
+  [1m[36mProduto Update (5.9ms)[0m  [1m[33mUPDATE "produtos" SET "nome" = ?, "updated_at" = ? WHERE "produtos"."id" = ?[0m  [["nome", "teste edição1"], ["updated_at", "2024-08-13 12:29:17.482977"], ["id", 2]]
+  ↳ app/controllers/produtos_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/produtos/2
+Completed 302 Found in 43ms (ActiveRecord: 12.6ms | Allocations: 3956)
+
+
+Started GET "/produtos/2" for 127.0.0.1 at 2024-08-13 09:29:17 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 1.7ms | Allocations: 258)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 35.9ms | Allocations: 1303)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 80.2ms | Allocations: 3535)
+Completed 200 OK in 100ms (Views: 82.6ms | ActiveRecord: 0.1ms | Allocations: 4242)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-13 09:29:21 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 874)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 73.9ms | Allocations: 3110)
+Completed 200 OK in 87ms (Views: 79.6ms | ActiveRecord: 0.1ms | Allocations: 3396)
+
+
+Started GET "/produtos/2" for 127.0.0.1 at 2024-08-13 09:29:25 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 418)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 2717)
+Completed 200 OK in 68ms (Views: 57.0ms | ActiveRecord: 0.1ms | Allocations: 3338)
+
+
+Started GET "/produtos" for 127.0.0.1 at 2024-08-13 09:29:27 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 870)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 48.8ms | Allocations: 3144)
+Completed 200 OK in 57ms (Views: 50.5ms | ActiveRecord: 0.1ms | Allocations: 3430)
+
+
+Started DELETE "/produtos/2" for 127.0.0.1 at 2024-08-13 09:29:29 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+  [1m[36mProduto Destroy (8.3ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/produtos
+Completed 302 Found in 29ms (ActiveRecord: 8.7ms | Allocations: 1971)
+
+
+Started GET "/produtos" for 127.0.0.1 at 2024-08-13 09:29:29 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 625)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 2861)
+Completed 200 OK in 60ms (Views: 53.7ms | ActiveRecord: 0.1ms | Allocations: 3139)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2024-08-13 09:29:32 -0300
+Processing by ProdutosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/_form.html.erb (Duration: 2.0ms | Allocations: 1024)
+  Rendered produtos/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1252)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 3485)
+Completed 200 OK in 69ms (Views: 55.1ms | ActiveRecord: 0.0ms | Allocations: 3857)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2024-08-13 09:29:43 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "produto"=>{"nome"=>"teste", "preco"=>"15,50", "data_validade"=>"2024-08-13", "quantidade_estoque"=>"10"}, "commit"=>"Salvar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:27:in `block in create'
+  [1m[36mProduto Create (3.4ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "preco", "data_validade", "quantidade_estoque", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["nome", "teste"], ["preco", 15.0], ["data_validade", "2024-08-13"], ["quantidade_estoque", 10.0], ["created_at", "2024-08-13 12:29:43.890234"], ["updated_at", "2024-08-13 12:29:43.890234"]]
+  ↳ app/controllers/produtos_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/produtos/4
+Completed 302 Found in 31ms (ActiveRecord: 4.1ms | Allocations: 2080)
+
+
+Started GET "/produtos/4" for 127.0.0.1 at 2024-08-13 09:29:43 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.2ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 453)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 59.2ms | Allocations: 2683)
+Completed 200 OK in 73ms (Views: 61.0ms | ActiveRecord: 0.1ms | Allocations: 3303)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-13 09:29:48 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 870)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 54.5ms | Allocations: 3105)
+Completed 200 OK in 64ms (Views: 56.1ms | ActiveRecord: 0.1ms | Allocations: 3383)
+
+
+Started GET "/produtos/4" for 127.0.0.1 at 2024-08-13 09:29:50 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 421)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 2720)
+Completed 200 OK in 67ms (Views: 52.5ms | ActiveRecord: 0.1ms | Allocations: 3342)
+
+
+Started GET "/produtos/4" for 127.0.0.1 at 2024-08-13 09:29:52 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduto Load (2.7ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.5ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 430)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 2699)
+Completed 200 OK in 63ms (Views: 50.2ms | ActiveRecord: 2.7ms | Allocations: 3319)
+
+
+Started GET "/produtos/4" for 127.0.0.1 at 2024-08-13 09:29:55 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 2.4ms | Allocations: 31)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 436)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | Allocations: 2666)
+Completed 200 OK in 62ms (Views: 52.2ms | ActiveRecord: 0.1ms | Allocations: 3286)
+
+
+Started GET "/produtos/4" for 127.0.0.1 at 2024-08-13 09:31:57 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 3.5ms | Allocations: 259)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 27.9ms | Allocations: 2310)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 2396)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 12.4ms | Allocations: 8912)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `produto' for #<ActionView::Base:0x00000000012070>):
+     5: <div>
+     6:   <%= link_to "Editar", edit_produto_path(@produto), class: "btn btn-dark", style: "margin-right: 30px;" %>
+     7:   <%= button_to "Apagar", {:controller => :produtos,
+     8:         :action => 'destroy', :id => produto.id }, :method => :delete, class: "btn btn-dark" %>
+     9: 
+    10:   <br> <br>
+    11:   <%= link_to "Retornar à listagem", produtos_path, class: "btn btn-dark" %>
+  
+app/views/produtos/show.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-08-13 09:32:57 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 5259)
+  Rendered home/_header.html.erb (Duration: 3.2ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 70.1ms | Allocations: 8083)
+Completed 200 OK in 126ms (Views: 97.8ms | ActiveRecord: 6.4ms | Allocations: 10142)
+
+
+Started GET "/produtos/4" for 127.0.0.1 at 2024-08-13 09:33:07 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 1.6ms | Allocations: 243)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1118)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 54.0ms | Allocations: 3347)
+Completed 200 OK in 72ms (Views: 57.0ms | ActiveRecord: 0.2ms | Allocations: 4712)
+
+
+Started DELETE "/produtos/4" for 127.0.0.1 at 2024-08-13 09:33:10 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+  [1m[36mProduto Destroy (1.9ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/produtos
+Completed 302 Found in 27ms (ActiveRecord: 8.4ms | Allocations: 1989)
+
+
+Started GET "/produtos" for 127.0.0.1 at 2024-08-13 09:33:11 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos"[0m
+  ↳ app/views/produtos/index.html.erb:19
+  Rendered produtos/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 619)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | Allocations: 2926)
+Completed 200 OK in 62ms (Views: 54.9ms | ActiveRecord: 0.1ms | Allocations: 3204)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2024-08-13 09:33:36 -0300
+Processing by ProdutosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/_form.html.erb (Duration: 4.0ms | Allocations: 1602)
+  Rendered produtos/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1903)
+  Rendered home/_header.html.erb (Duration: 2.7ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 74.4ms | Allocations: 4725)
+Completed 200 OK in 151ms (Views: 111.6ms | ActiveRecord: 10.1ms | Allocations: 10193)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2024-08-13 09:33:51 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "produto"=>{"nome"=>"teste", "preco"=>"21,99", "data_validade"=>"2024-08-13", "quantidade_estoque"=>"50"}, "commit"=>"Salvar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:27:in `block in create'
+  [1m[36mProduto Create (3.1ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "preco", "data_validade", "quantidade_estoque", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["nome", "teste"], ["preco", 21.0], ["data_validade", "2024-08-13"], ["quantidade_estoque", 50.0], ["created_at", "2024-08-13 12:33:51.608283"], ["updated_at", "2024-08-13 12:33:51.608283"]]
+  ↳ app/controllers/produtos_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/produtos/5
+Completed 302 Found in 26ms (ActiveRecord: 5.6ms | Allocations: 2150)
+
+
+Started GET "/produtos/5" for 127.0.0.1 at 2024-08-13 09:33:51 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1214)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1307)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms | Allocations: 2769)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @produto %>
+
+<div>
+  <%= link_to "Editar", edit_produto_path(@produto), class: "btn btn-dark", style: "margin-right: 30px;" %>
+  <%= button_to "Apagar", {:controller => :produtos,
+        :action => 'destroy', :id => @produto.id }, :method => :delete class: "btn btn-dark" %>
+
+  <br> <br>
+  <%= link_to "Retornar à listagem", produtos_path, class: "btn btn-dark" %>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <%= render @produto %>
+4:    
+5:    <div>
+6:      <%= link_to "Editar", edit_produto_path(@produto), class: "btn btn-dark", style: "margin-right: 30px;" %>
+7:      <%= button_to "Apagar", {:controller => :produtos,
+8:            :action => 'destroy', :id => @produto.id }, :method => :delete class: "btn btn-dark" %>
+9:    
+10:      <br> <br>
+11:      <%= link_to "Retornar à listagem", produtos_path, class: "btn btn-dark" %>
+12:    </div>
+  
+app/views/produtos/show.html.erb:8: syntax error, unexpected `class', expecting ')'
+Started GET "/produtos/5" for 127.0.0.1 at 2024-08-13 09:35:00 -0300
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 1.6ms | Allocations: 259)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1656)
+  Rendered home/_header.html.erb (Duration: 4.3ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 74.1ms | Allocations: 4470)
+Completed 200 OK in 184ms (Views: 122.6ms | ActiveRecord: 8.5ms | Allocations: 10968)
+
+
